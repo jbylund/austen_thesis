@@ -1,2 +1,9 @@
-# austen_thesis
-Austen Sitko's PhD Thesis
+Columbia University Thesis by Austen Sitko
+===========================================
+Using Latex templates originally by:
+
+Panagiotis Ipeirotis
+
+Agustin Gravano
+
+Austen Sitko
