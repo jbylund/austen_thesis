@@ -6,7 +6,7 @@ TEXCOMMAND := pdflatex
 TEXOPTS    := -halt-on-error
 BIBCOMMAND := bibtex
 TEXFILES   := $(shell find . -iname "*.tex")
-BIBFILES   := $(shell find refs -iname "*.bib")
+BIBFILES   := $(shell find Refs -iname "*.bib")
 
 # view : $(OUTPUTNAME)
 #	@-evince $(shell ls -t pdfs/*.pdf|head -n 1)
@@ -16,7 +16,7 @@ $(OUTPUTNAME) : named.bst $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex
 	$(BIBCOMMAND) $(BASENAME)
 	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
 	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
-	@find refs -type f -name "*~" -delete
+	@find Refs -type f -name "*~" -delete
 	mkdir -p pdfs
 	perl -pi -e "s/.*?ModDate.*/\/ModDate (D:20130418152511-04'00')/" $(BASENAME).pdf
 	perl -pi -e "s/.*?CreationDate.*/\/CreationDate (D:20130418152541-04'00')/" $(BASENAME).pdf
@@ -60,10 +60,10 @@ named.bst:
 	wget --timestamping http://mirrors.rit.edu/CTAN/biblio/bibtex/contrib/named/named.bst
 
 refs.bib : $(BIBFILES)
-	/bin/cat refs/*.bib > refs.bib
+	/bin/cat Refs/*.bib > Refs.bib
 
 clean :
-	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof
+	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof refs.bib named.bst
 	@/bin/rm -f $(OUTPUTNAME)
 
 # rule to make each flowchart

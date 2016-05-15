@@ -20,7 +20,7 @@
 % table of tables and table of figures
 \listoffigures
 \cleardoublepage
-\listoftables 
+\listoftables
 \cleardoublepage
 
 % Acknowledgments
@@ -42,7 +42,7 @@
 \setlength{\textheight}{8.5in}
 \setlength{\footskip}{0in}
 
-% We change the pagestyle 
+% We change the pagestyle
 \fancypagestyle{plain} {%
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
@@ -53,14 +53,15 @@
 \clearpage
 \pagenumbering{arabic}
 
-\input{1_intro/intro}
+% note contents.tex is generated programmatically, do not change this
+\input{contents.tex}
 
 % Bibliography
 %\part{Bibliography}
 %\chapter{Bibliography}
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{refs}
-\bibliographystyle{named} 
+\bibliographystyle{named}
 
 \end{document}
 
