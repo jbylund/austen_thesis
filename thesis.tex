@@ -1,5 +1,5 @@
-\documentclass[11pt,openright,oneside,letterpaper,onecolumn]{report}  %% USE THIS FOR SINGLE SIDED
-\input{header}
+\documentclass[11pt,openright,twoside,letterpaper,onecolumn]{report}  %% USE THIS FOR SINGLE SIDED
+\input{special_sections/header}
 \begin{document}
 \pagestyle{empty}
 \normalspace
@@ -24,11 +24,11 @@
 \cleardoublepage
 
 % Acknowledgments
-\input{acknowledgements.tex}
+\input{special_sections/acknowledgements.tex}
 \cleardoublepage
 
 % Dedication page
-\input{dedication.tex}
+\input{special_sections/dedication.tex}
 \cleardoublepage
 
 %%% BODY
@@ -60,7 +60,7 @@
 %\part{Bibliography}
 %\chapter{Bibliography}
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliography{refs}
+\bibliography{Refs}
 \bibliographystyle{named}
 
 \end{document}

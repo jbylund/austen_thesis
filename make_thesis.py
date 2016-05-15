@@ -40,7 +40,9 @@ def get_contents():
                 section_title = title
             ))
         else:
-            retval.append("\include{{{}}}".format((os.sep).join(iobj[top_level_depth:])))
+            partial_path = (os.sep).join(iobj[top_level_depth:])
+            sans_tex = partial_path.rpartition('.')[0]
+            retval.append("\include{{{}}}".format(sans_tex))
     return "\n".join(retval)
 
 
