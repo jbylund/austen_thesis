@@ -8,6 +8,7 @@ split template on %%%%%%%%%%%%
 """
 import os
 
+
 def get_file_list():
     files_and_dirs = set()
     for root, dirnames, files in os.walk(os.getcwd()):
@@ -17,9 +18,9 @@ def get_file_list():
             if "special_sections" in root:
                 continue
             if ifile in [
-                            "contents.tex",
-                            "thesis.tex"
-                        ]:
+                "contents.tex",
+                "thesis.tex"
+            ]:
                 continue
             root_tuple = tuple(root.split(os.sep))
             this_file = root_tuple + (ifile,)
@@ -28,7 +29,8 @@ def get_file_list():
     this_file = tuple(os.path.realpath(__file__).split(os.sep))
     for sublen in xrange(0, len(this_file) + 1):
         files_and_dirs.discard(this_file[0:sublen])
-    sorted_files_and_dirs = sorted(files_and_dirs, key=lambda x: os.path.join(*x).lower())
+    sorted_files_and_dirs = sorted(
+        files_and_dirs, key=lambda x: os.path.join(*x).lower())
     return sorted_files_and_dirs
 
 
@@ -44,8 +46,12 @@ def get_contents():
             this_depth = len(iobj) - top_level_depth
             title = " ".join(iobj[-1].split('_')[1:])
             retval.append("\{section_type}{{{section_title}}}".format(
-                section_type = priority[this_depth],
-                section_title = title
+                section_type=priority[this_depth],
+                section_title=title
+            ))
+            retval.append("\label{{{section_type}:{section_title}}}".format(
+                section_type=priority[this_depth],
+                section_title=title
             ))
         else:
             partial_path = (os.sep).join(iobj[top_level_depth:])
@@ -60,4 +66,3 @@ def main():
 
 if "__main__" == __name__:
     main()
-
