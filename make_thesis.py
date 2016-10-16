@@ -56,7 +56,11 @@ def get_contents():
         else:
             partial_path = (os.sep).join(iobj[top_level_depth:])
             sans_tex = partial_path.rpartition('.')[0]
-            retval.append("\include{{{}}}".format(sans_tex))
+            iobj = '/'.join(iobj)
+            #print iobj
+            contents = open(iobj).read()
+            #retval.append("\include{{{}}}".format(sans_tex))
+            retval.append(contents)
     return "\n".join(retval)
 
 
