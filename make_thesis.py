@@ -8,9 +8,7 @@ split template on %%%%%%%%%%%%
 """
 import os
 
-def get_contents():
-    """return the contents as a string"""
-    top_level_depth = len(os.getcwd().split(os.sep))
+def get_file_list():
     files_and_dirs = set()
     for root, dirnames, files in os.walk(os.getcwd()):
         for ifile in files:
@@ -25,12 +23,22 @@ def get_contents():
                 continue
             root_tuple = tuple(root.split(os.sep))
             this_file = root_tuple + (ifile,)
-            files_and_dirs.add(root_tuple)
-            files_and_dirs.add(this_file)
-    priority = [None, 'chapter', 'section', 'subsection', 'subsubsection']
+            for sublen in xrange(0, len(this_file) + 1):
+                files_and_dirs.add(this_file[0:sublen])
+    this_file = tuple(os.path.realpath(__file__).split(os.sep))
+    for sublen in xrange(0, len(this_file) + 1):
+        files_and_dirs.discard(this_file[0:sublen])
     sorted_files_and_dirs = sorted(files_and_dirs, key=lambda x: os.path.join(*x).lower())
+    return sorted_files_and_dirs
+
+
+def get_contents():
+    """return the contents as a string"""
+    files_and_dirs = get_file_list()
+    top_level_depth = len(os.getcwd().split(os.sep))
+    priority = [None, 'chapter', 'section', 'subsection', 'subsubsection']
     retval = list()
-    for iobj in sorted_files_and_dirs:
+    for iobj in files_and_dirs:
         ipath = (os.sep).join(iobj)
         if os.path.isdir(ipath):
             this_depth = len(iobj) - top_level_depth
