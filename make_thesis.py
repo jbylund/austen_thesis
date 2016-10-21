@@ -38,7 +38,7 @@ def get_contents():
     """return the contents as a string"""
     files_and_dirs = get_file_list()
     top_level_depth = len(os.getcwd().split(os.sep))
-    priority = [None, 'chapter', 'section', 'subsection', 'subsubsection']
+    priority = [None, 'chapter', 'section', 'subsection', 'subsubsection', 'paragraph']
     retval = list()
     for iobj in files_and_dirs:
         ipath = (os.sep).join(iobj)
