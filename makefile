@@ -12,9 +12,9 @@ BIBFILES   := $(shell find Refs -iname "*.bib")
 #	@-evince $(shell ls -t pdfs/*.pdf|head -n 1)
 
 $(OUTPUTNAME) : named.bst $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex/latex/base/article.cls Refs.bib /usr/local/share/texmf/tex/latex/ccicons/ccicons.sty
-	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
-	$(BIBCOMMAND) $(BASENAME)
-	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
+	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex || true
+	$(BIBCOMMAND) $(BASENAME) || true
+	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex || true
 	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
 	@find Refs -type f -name "*~" -delete
 	mkdir -p pdfs
