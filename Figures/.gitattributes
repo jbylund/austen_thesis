@@ -1,3 +1,15 @@
 Fig2_OT_v2.svg filter=lfs diff=lfs merge=lfs -text
 Sert_NerveToTract.svg filter=lfs diff=lfs merge=lfs -text
 Sert_dLGN.svg filter=lfs diff=lfs merge=lfs -text
+AxonOrg_Mechs.svg filter=lfs diff=lfs merge=lfs -text
+AxonOrg_ThreeModes.svg filter=lfs diff=lfs merge=lfs -text
+DiIDiD_WT.svg filter=lfs diff=lfs merge=lfs -text
+DiIDiD_WT_Serial.svg filter=lfs diff=lfs merge=lfs -text
+DiIDiD_WT_VTVT.svg filter=lfs diff=lfs merge=lfs -text
+IpsiContraVTVT.svg filter=lfs diff=lfs merge=lfs -text
+RGP_DevSeries.svg filter=lfs diff=lfs merge=lfs -text
+RGP_Schema.svg filter=lfs diff=lfs merge=lfs -text
+SerialSectionsP0_Topog.svg filter=lfs diff=lfs merge=lfs -text
+Sert_Retina.svg filter=lfs diff=lfs merge=lfs -text
+TopogIpsiContra.svg filter=lfs diff=lfs merge=lfs -text
+TopographySummary.svg filter=lfs diff=lfs merge=lfs -text
