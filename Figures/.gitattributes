@@ -13,3 +13,7 @@ SerialSectionsP0_Topog.svg filter=lfs diff=lfs merge=lfs -text
 Sert_Retina.svg filter=lfs diff=lfs merge=lfs -text
 TopogIpsiContra.svg filter=lfs diff=lfs merge=lfs -text
 TopographySummary.svg filter=lfs diff=lfs merge=lfs -text
+BundleWidth.svg filter=lfs diff=lfs merge=lfs -text
+EnFaceAssayDesign.svg filter=lfs diff=lfs merge=lfs -text
+EnFaceData.svg filter=lfs diff=lfs merge=lfs -text
+Zic2_invitro.svg filter=lfs diff=lfs merge=lfs -text
