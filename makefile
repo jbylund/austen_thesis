@@ -11,7 +11,7 @@ BIBFILES   := $(shell find Refs -iname "*.bib")
 # view : $(OUTPUTNAME)
 #	@-evince $(shell ls -t pdfs/*.pdf|head -n 1)
 
-$(OUTPUTNAME) : named.bst $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex/latex/base/article.cls Refs.bib /usr/local/share/texmf/tex/latex/ccicons/ccicons.sty
+$(OUTPUTNAME) :  $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex/latex/base/article.cls Refs.bib /usr/local/share/texmf/tex/latex/ccicons/ccicons.sty
 	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex || true
 	$(BIBCOMMAND) $(BASENAME) || true
 	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex || true
@@ -56,14 +56,11 @@ texdirs:
 	sudo updmap-sys --enable Map ccicons.map
 
 
-named.bst:
-	wget --timestamping http://mirrors.rit.edu/CTAN/biblio/bibtex/contrib/named/named.bst
-
 Refs.bib : $(BIBFILES)
 	/bin/cat Refs/*.bib > Refs.bib
 
 clean :
-	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof Refs.bib named.bst
+	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof Refs.bib
 	@/bin/rm -f $(OUTPUTNAME)
 
 # rule to make each flowchart
