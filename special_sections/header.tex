@@ -22,8 +22,7 @@
 \usepackage{makeidx}
 \usepackage{mathtools}
 \usepackage{multirow}
-\usepackage{named}
-\usepackage{nameref}
+\usepackage{jneurosci}
 \usepackage{pdflscape}
 \usepackage{relsize}
 \usepackage[section]{placeins}
@@ -67,8 +66,9 @@
 % The settings below leave 1.5 inch margin at the left and 1 inch at the right
 % for US Letter paper
 \setlength{\hoffset}{0.0in}
-\setlength{\oddsidemargin}{.5in}
-\setlength{\textwidth}{6in}
+\setlength{\oddsidemargin}{0.0in}
+% change me to 0.5 for binding
+\setlength{\textwidth}{6.5in}
 \setlength{\evensidemargin}{0mm}
 
 % 1in + voffset + topmargin + headheight + headsep + textheight + footskip
@@ -109,7 +109,7 @@
         Physicians \& Surgeons Building\\
         630 West 168th Street\\
         Room 14-240 \\[7cm]
-        \textbf{\Large COLUMBIA UNIVERSITY} \\[5mm]
+        \textbf{\Large Columbia University} \\[5mm]
         \thesisyear
     \end{center}
     \clearpage
@@ -130,7 +130,7 @@
         requirements for the degree \\
         of Doctor of Philosophy \\
         in the Graduate School of Arts and Sciences \\[4cm]
-        \textbf{\Large COLUMBIA UNIVERSITY} \\[5mm]
+        \textbf{\Large Columbia University} \\[5mm]
         \thesisyear
     \end{center}
     \clearpage
@@ -158,9 +158,9 @@
 \newcommand{\thesisabstract}{
     \thispagestyle{empty}
     \begin{center}
-    \textbf{\LARGE ABSTRACT} \\[1cm]
-     \textbf{\LARGE \thesistitle} \\[1cm]
-     \textbf{\LARGE \thesisauthor} \\[1cm]
+    \textbf{\LARGE Abstract} \\[1cm]
+     %\textbf{\LARGE \thesistitle} \\[1cm]
+     %\textbf{\LARGE \thesisauthor} \\[1cm]
     \end{center}
     \input{special_sections/abstract}
     \cleardoublepage
