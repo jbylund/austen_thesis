@@ -7,7 +7,7 @@ In this assay, I used the width of neurite bundles to assay the degree of fascic
 Measuring the width of fascicles potentially provides a more meaningful assessment of degree of fasciculation, and this width measurement has been used before, although only to test very large differences in fasciculation \cite{jaworski2012autocrine}.
 I aimed to improve on this measurement so that it would capture potentially subtle differences in degree of fasciculation, and not just large, more obvious differences.
 
-In the first attempt at measuring neurite bundle widths, I used automated measurements in Fiji (a distribution of the open-source ImageJ software \cite{schindelin2012fiji}).
+The first attempt at measuring neurite bundle widths used automated measurements in Fiji (a distribution of the open-source ImageJ software \cite{schindelin2012fiji}).
 I trained a rotation student, Nick Gallerani, on the retinal explant culture system and he performed an automated Fiji-based analysis of bundle widths on three rounds of explant cultures in which E14.5 VT and DT explants were culture singly rather than in pairs.
 In order to perform the automated measurement of bundle widths, the images needed to be thresholded.
 Unfortunately, the images of the explant cultures have a very high dynamic range of pixel intensity, which rendered the thresholding process unreliable.
@@ -15,9 +15,16 @@ If the image thresholding prioritized maintaining visibility of single neurites,
 Conversely, if the image thresholding prioritized maintaining the actual width of larger and brighter fascicles, the thresholding often failed to capture the dimmer single or small bundles of neurites.
 The limitations of thresholding proved to be a fatal weakness in the automated analysis.
 When I reviewed the data from the automated Fiji analysis, I found that it was showing neurites bundles as thick as 50$\mu$m or more, which was an obvious exaggeration of the data when I looked at the thickest bundles in the explants themselves.
-Even with several attempts at optimizing the thresholding and parameters of the automated measurements, I found that this appraoch was not accurate and reliable for the more subtle differences I needed to test between explant type.
+Even with several attempts at optimizing the thresholding and parameters of the automated measurements, I found that this appraoch was not accurate and reliable for the more subtle differences I aimed to test between explant type.
 
-Thus, I turned to manually measuring neurite bundle widths.
+I subsequently tested the use of a traditional Sholl analysis in Fiji \cite{ferreira2014neuronal}, but found that it suffered from similar thresholding-related problems.
+Searches for readily available tools to measure neurite bundle thickness or neurite complexity in explants with robust neurite outgrowth proved largely fruitless.
+One recent publication reported a semi-automatic quantification method specifically for use in explants with dense neurite outgrowth, in which tracing and reconstructing the full neurite arbor is unfeasible \cite{hopkins2014semi}.
+This approach, called the neurite directional distribution analysis (NDDA) can use raw image files for its input, bypassing the thresholding limitations.
+However, it is a closed-source program that runs solely on a software platform I did not have access to at the time of these experiments.
+In the future, it will be worth exploring whether the NDDA approach provides adequate analysis of retinal explant neurite fasciculation. 
+
+Given the shortcomings of the automated approaches available to me, I turned instead to manually measuring neurite bundle widths.
 The approach for this method is shown in Figure~\ref{Figures/BundleWidth_Cartoon}.
 I took E14.5 VT or DT retinal explants from WT C57BL/6J mice and cultured them in SFM+0.4\% methylcellulose on 20$\mu$g/ml laminin overnight.
 Explants were plated singly, so that they did not interact with any nearby explants.
