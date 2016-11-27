@@ -23,7 +23,7 @@ $(OUTPUTNAME) :  $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex/latex/ba
 	perl -pi -e "s/.*?\/ID \[<.*/\/ID [<0535B734E397B655F1D0DD37FD8A8CF9> <0535B734E397B655F1D0DD37FD8A8CF9>]/" $(BASENAME).pdf
 	cp $(BASENAME).pdf $(OUTPUTNAME)
 	mv $(BASENAME).pdf austen_sitko_thesis.pdf
-	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof
+	@/bin/rm -rf  -rf *.aux *.bbl *.blg *.out *.toc *.lot *.lof
 	fdupes pdfs -q -d -N
 
 ccicons.zip:
