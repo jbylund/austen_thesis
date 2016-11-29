@@ -27,3 +27,7 @@ Figures/EphB1_Sert_schematic.pdf filter=lfs diff=lfs merge=lfs -text
 Figures/EphB1_WT_DiIDiDv1.pdf filter=lfs diff=lfs merge=lfs -text
 Figures/EphB1_schematic.pdf filter=lfs diff=lfs merge=lfs -text
 Figures/EphB1_WT_DiIDiDv1.svg filter=lfs diff=lfs merge=lfs -text
+Figures/ESCretinacounts.svg filter=lfs diff=lfs merge=lfs -text
+Figures/EphB1_InVitro.svg filter=lfs diff=lfs merge=lfs -text
+Figures/ESCretinacounts.pdf filter=lfs diff=lfs merge=lfs -text
+Figures/EphB1_InVitro.pdf filter=lfs diff=lfs merge=lfs -text
