@@ -5,7 +5,7 @@ OUTPUTNAME := pdfs/austen_sitko_thesis.pdf
 TEXCOMMAND := pdflatex
 TEXOPTS    := -halt-on-error --shell-escape
 BIBCOMMAND := bibtex
-TEXFILES   := $(shell find . -iname "*.tex")
+TEXFILES   := $(shell find . -iname "*.tex" | grep -v ':')
 BIBFILES   := $(shell find Refs -iname "*.bib")
 
 # view : $(OUTPUTNAME)
