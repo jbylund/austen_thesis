@@ -41,3 +41,5 @@ Figures/Linx_fig3.pdf filter=lfs diff=lfs merge=lfs -text
 Figures/Linx_fig4.pdf filter=lfs diff=lfs merge=lfs -text
 Figures/Linx_fig5.pdf filter=lfs diff=lfs merge=lfs -text
 Figures/LinxMsFig.svg filter=lfs diff=lfs merge=lfs -text
+Figures/LinxFig3.pdf filter=lfs diff=lfs merge=lfs -text
+Figures/LinxFig3.svg filter=lfs diff=lfs merge=lfs -text
