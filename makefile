@@ -18,6 +18,8 @@ $(OUTPUTNAME) :  $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex/latex/ba
 	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
 	@find Refs -type f -name "*~" -delete
 	mkdir -p pdfs
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$(BASENAME).small.pdf $(BASENAME).pdf
+	mv $(BASENAME).small.pdf $(BASENAME).pdf
 	perl -pi -e "s/.*?ModDate.*/\/ModDate (D:20130418152511-04'00')/" $(BASENAME).pdf
 	perl -pi -e "s/.*?CreationDate.*/\/CreationDate (D:20130418152541-04'00')/" $(BASENAME).pdf
 	perl -pi -e "s/.*?\/ID \[<.*/\/ID [<0535B734E397B655F1D0DD37FD8A8CF9> <0535B734E397B655F1D0DD37FD8A8CF9>]/" $(BASENAME).pdf
