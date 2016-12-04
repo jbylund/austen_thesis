@@ -6,9 +6,9 @@ Additionally, as discussed above, the \emph{en face} assay had other drawbacks r
 As such, I turned to a simpler in vitro retinal explant setup to more reliably test whether ipsi and contra RGC axons have intrinsic differences in their fasciculation behavior.
 In this assay, I used the width of neurite bundles to assay the degree of fasciculation in VT and DT retinal explants.
 Measuring the width of fascicles potentially provides a more meaningful assessment of degree of fasciculation, and this width measurement has been used before, although only to test very large differences in fasciculation \cite{jaworski2012autocrine}.
-I aimed to improve on this measurement so that it would capture potentially subtle differences in degree of fasciculation, and not just large, more obvious differences.
+I aimed to improve on this measurement so that it would capture potentially subtle differences in degree of fasciculation, and not just large, qualitatively obvious differences.
 
-The first attempt at measuring neurite bundle widths used automated measurements in Fiji (a distribution of the open-source ImageJ software \cite{schindelin2012fiji}).
+The first attempt at measuring neurite bundle widths used automated measurements in Fiji (a distribution of the open-source ImageJ software, \citenoparens{schindelin2012fiji}).
 I trained a rotation student, Nick Gallerani, on the retinal explant culture system and he performed an automated Fiji-based analysis of bundle widths on three rounds of explant cultures in which E14.5 VT and DT explants were culture singly rather than in pairs.
 In order to perform the automated measurement of bundle widths, the images needed to be thresholded.
 Unfortunately, the images of the explant cultures have a very high dynamic range of pixel intensity, which rendered the thresholding process unreliable.
@@ -25,14 +25,14 @@ This approach, called the neurite directional distribution analysis (NDDA) can u
 However, it is a closed-source program that runs solely on a software platform I did not have access to at the time of these experiments.
 In the future, it will be worth exploring whether the NDDA approach provides adequate analysis of retinal explant neurite fasciculation.
 
-Given the shortcomings of the automated approaches available to me, I turned instead to manually measuring neurite bundle widths.
+Given the shortcomings of the automated approaches available, I turned instead to manually measuring neurite bundle widths.
 The approach for this method is shown in Figure~\ref{Figures/BundleWidthCartoon}.
-I took E14.5 VT or DT retinal explants from WT C57BL/6J mice and cultured them in SFM+0.4\% methylcellulose on 20$\mu$g/ml laminin overnight.
-Explants were plated singly, so that they did not interact with any nearby explants.
+I took E14.5 VT or DT retinal explants from wild-type mice and cultured them in SFM+0.4\% methylcellulose on 20$\mu$g/ml laminin overnight.
+Explants were plated singly, so that they did not interact with neurites of nearby explants.
 After fixing the explants with warm 4\% PFA and immunostaining for NF to visualize all the neurites, I set two rings around the circumference of the explant body, 250$\mu$m and 500$\mu$m away from the edge of the explant, producing a Sholl-like setup for my analysis.
 I then imaged the neurites along each ring at high magnification and traced the width of each intersecting neurite or neurite bundle along each of the two rings in Neurolucida (v11, MBF Biosciences, Williston, VT, USA).
 The righthand image in Figure~\ref{Figures/BundleWidthCartoon} is a screenshot from Neurolucida showing one of the rings, in orange, and the green lines measuring the width of each intersecting neurite or neurite bundle.
-I performed these measurements around both the 250$\mu$m and 500$\mu$m radius rings as a way of accounting for fasciculation dynamics along the length of the neurites.
+I performed these measurements, blinded to explant type, around both the 250$\mu$m and 500$\mu$m radius rings as a way of accounting for fasciculation dynamics along the length of the neurites.
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics{Figures/BundleWidth_Cartoon.pdf}
@@ -51,21 +51,20 @@ I first measured the bundle widths of each explant type grown for 24 hours (hr) 
 At both the 250$\mu$m and 500$\mu$m radius rings, VT neurites formed thicker bundles than DT neurites (Figure~\ref{Figures/BundleWidth}B).
 Additionally, for both explant types, neurites formed thicker bundles at the farther (500$\mu$m) radius ring (compare light and dark lines for each type in Figure~\ref{Figures/BundleWidth}B).
 This suggests that neurites do not progressively unravel as they extend farther from the explant body.
-Rather, it appears that as neurites grow in vitro under these conditions, their fasciculation is slightly enchanced the farther from the explant body the neurites grow.
+Rather, it appears that as neurites grow in these conditions, their fasciculation is slightly enhanced the farther from the explant body the neurites grow.
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics{Figures/BundleWidth.pdf}
         \caption[Ipsi neurites have an intrinsic preference to form thicker bundles in vitro compared to contra neurites.]
         {Ipsi neurites have an intrinsic preference to form thicker bundles in vitro compared to contra neurites.
-        A) Representative samples of E14.5 DT (top, contra) and VT (bottom, ipsi) retinal explants plated on 20$\mu$g/ml laminin only (left column) or 20$\mu$g/ml laminin with dissociated chiasm cells (+OC) plated at a concentration of 3.5\textsuperscript{*}10\textsuperscript{5}cells/ml (right column).
+        A) Representative samples of E14.5 DT (top, contra) and VT (bottom, ipsi) retinal explants plated on 20$\mu$g/ml laminin (left column) or 20$\mu$g/ml laminin with dissociated chiasm cells (+OC) plated at a concentration of 3.5\textsuperscript{*}10\textsuperscript{5}cells/ml (right column).
         Scale=500$\mu$m.
         B-E) Cumulative distribution functions of bundle widths for VT and DT explants with and without chiasm cells.
-        B) Cumulative distribution of bundle widths at both 250$\mu$m and 500$\mu$m for VT (green lines) and DT (magenta lines) on 20$\mu$g/ml laminin.
-        VT neurites form significantly thicker bundles than DT neurites at both radii.
+        B) VT neurites form significantly thicker bundles than DT neurites at both radii.
         Additionally, there are significant differences within each explant type between the 250$\mu$m and 500$\mu$m radii, such that neurites form thicker bundles at the 500$\mu$m ring compared to the 250$\mu$m ring.
-        C) When grown in the presence of low density chiasm cells, VT neurites maintain their intrinsic preference to form thicker bundles than DT neurites (data shown here from the 250$\mu$m ring).
+        C) When grown with low density dissociated chiasm cells, VT neurites maintain an intrinsic preference to form thicker bundles than DT neurites (data shown here from the 250$\mu$m ring).
         D-E) Comparing bundle widths for each explant type with and without chiasm cells illustrates that neurites bundle more thickly in the presence of chiasm cells (data shown here from the 250$\mu$m ring).
-        This effect of chiasm cells is true for both contra neurites (DT, shown in D) and ipsi (VT, shown in E) neurites.
+        Chiasm cells affect both contra (DT, shown in D) and ipsi (VT, shown in E) neurites.
         n=18 VT explants, n=17 DT explants, from 4 experiments.
         n=16 VT+OC explants, n=16 DT+OC explants, from 3 experiments.
         Statistical significance calculated with Mann-Whitney U Test.
@@ -75,13 +74,13 @@ Rather, it appears that as neurites grow in vitro under these conditions, their 
 \end{figure}
 
 This experimental setup conceptually recapitulates the optic nerve, because neurites are na\"ive to the chiasm cues that direct them into the optic tract.
-In order to challenge the intrinsic difference between ipsi and contra neurites, I next added dissociated chiasm cells plated at a low density (3.5\textsuperscript{*}10\textsuperscript{5}cells/ml) on 20$\mu$g/ml laminin (this is represented by `+OC' in the figures).
-Dissociated chiasm cells are known to be refractory to neurite outgrowth for both VT and DT retinal explants, so I used this low density in order to allow adequate outgrowth for the bundle width analysis.
+In order to challenge the intrinsic difference between ipsi and contra neurites, I added dissociated chiasm cells plated at a low density (3.5\textsuperscript{*}10\textsuperscript{5}cells/ml) on 20$\mu$g/ml laminin (this is represented by `+OC' in the figures).
+Dissociated chiasm cells are refractory to neurite outgrowth for both VT and DT retinal explants, so I used this low density in order to allow adequate outgrowth for the bundle width analysis.
 %Do I need to cite anything here?
 Because ipsi neurites are repelled from the chiasm, I hypothesized that the addition of chiasm cells would preferentially affect ipsi (VT) neurites, and contra (DT) neurites to a lesser extent.
 As shown in Figure~\ref{Figures/BundleWidth}C, ipsi neurites maintain their intrinsic preference to form thicker neurite bundles, or fascicles, than their contra counterparts when grown in the presence of dissociated chiasm cells.
 However, the addition of chiasm cells affects both explant types (Figure~\ref{Figures/BundleWidth}D-E), without appearing to significantly magnify the ipsi/contra difference that was present in bundle width in the absence of chiasm cells (compare Figure~\ref{Figures/BundleWidth}B to C).
-Thus, the presence of chiasm cues, as provided by low density dissociated chiasm cells, increases fasciculation of both ipsi and contra neurites, without abolishing the intrinsic preference of ipsi neurites to form thicker bundles than contra neurites.
+Thus, the presence of chiasm cues, as provided by low density dissociated chiasm cells, increases fasciculation of both ipsi and contra neurites, without eliminating the intrinsic preference of ipsi neurites to form thicker bundles than contra neurites.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -116,6 +115,6 @@ Alternatively (or perhaps additionally), the lack of difference between bundle t
 
 Figure~\ref{Figures/BundleWidthmoreGraphs}B and C provide comparisons of DT and VT neurite bundle widths, respectively, with and without chiasm cells.
 While fascicle widths of DT neurites at the 250$\mu$m ring are significantly thicker in the chiasm co-cultures compared to laminin alone, there is no significant difference between the two at the 500$\mu$m ring.
-This may be indicative of a lesser impact of chiasm cells on DT explants compared to VT explants, in which the addition of chiasm cells signficantly increases bundle widths at both rings (Figure~\ref{Figures/BundleWidthmoreGraphs}C).
-Overall, ipsi (VT) neurites have an intrinsically greater preference to fasciculate into thicker bundles than DT neurites.
+This may indicate a lesser impact of chiasm cells on DT explants compared to VT explants, in which the addition of chiasm cells significantly increases bundle widths at both rings (Figure~\ref{Figures/BundleWidthmoreGraphs}C).
+Overall, ipsi (VT) neurites have an intrinsically greater preference to fasciculate into thicker bundles than contra (DT) neurites.
 This intrinsic difference remains relatively unaffected by the addition of extrinsic cues in the form of chiasm cells, although these extrinsic cues may indeed have a greater effect on VT neurites compared to DT neurites.
