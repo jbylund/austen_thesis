@@ -31,9 +31,12 @@
 \input{special_sections/dedication.tex}
 \cleardoublepage
 
+% Dedication page
+\input{special_sections/disclaimer.tex}
+\cleardoublepage
+
 %%% BODY
 \pagestyle{headings}
-\pagenumbering{arabic}
 
 % In the "arabic" section of the thesis, we do not have numbers at  the
 % bottom and we want to use the full length of the page to avoid vbox
@@ -56,7 +59,7 @@
 % note contents.tex is generated programmatically, do not change this
 \input{contents.tex}
 
-% Bibliography
+%% Bibliography
 \bibliographystyle{jneurosci}
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{Refs}
