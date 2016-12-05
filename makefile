@@ -8,14 +8,9 @@ BIBCOMMAND := bibtex
 TEXFILES   := $(shell find . -iname "*.tex" | grep -v ':')
 BIBFILES   := $(shell find Refs -iname "*.bib")
 
-# view : $(OUTPUTNAME)
-#	@-evince $(shell ls -t pdfs/*.pdf|head -n 1)
-
 $(OUTPUTNAME) :  $(TEXFILES) makefile /usr/share/texlive/texmf-dist/tex/latex/base/article.cls Refs.bib /usr/local/share/texmf/tex/latex/ccicons/ccicons.sty
-	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex || true
-	$(BIBCOMMAND) $(BASENAME) || true
-	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex || true
-	$(TEXCOMMAND) $(TEXOPTS) -jobname $(BASENAME) $(BASENAME).tex
+	latexmk -f -pdf thesis || ls thesis.pdf
+	/bin/rm -rvf *.bcf *.fdb_latexmk *.fls
 	@find Refs -type f -name "*~" -delete
 	mkdir -p pdfs
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$(BASENAME).small.pdf $(BASENAME).pdf
@@ -62,7 +57,7 @@ Refs.bib : $(BIBFILES)
 	/bin/cat Refs/*.bib > Refs.bib
 
 clean :
-	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof Refs.bib
+	@/bin/rm -rf  -rf *.log *.aux *.bbl *.blg *.out *.toc *.lot *.lof *.bcf *.fdb_latexmk *.fls Refs.bib
 	@/bin/rm -f $(OUTPUTNAME)
 
 # rule to make each flowchart
