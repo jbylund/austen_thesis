@@ -1,0 +1,21 @@
+In summary, the work presented here present three main avenues for near-term future studies.
+First, to deepen our understanding of how different modes of axon organization relate within the optic tract, one of the top priorities will be studying the pre-target organization of RGC subtypes.
+Using some of the newly identified genes and reporter mice that have already been produced \cite{rivlin2011transgenic}, we could start to correlate RGC subtype-specific axon organization in the tract with targeting patterns in the dLGN.
+Perhaps axons from RGC subtypes that target diffusely across the dLGN are also spread more evenly through the optic tract.
+Such a finding would provide more support for a model in which pre-target axon organization and targeting are connected processes in circuit development.
+
+Second, and perhaps the most exciting area of future study, builds upon the \emph{in vitro} work presented in Chapter 3.
+The most doable next step to extend the findings of differential fasciculation between ipsi and contra RGC neurites is to perform live imaging.
+While analysis of actively growing neurites will be more complicated and time-intensive, it will provide information on the dynamics of fasciculation, which remain an understudied phenomenon.
+Furthermore, in a live imaging setup, we could assess the immediate effects of candidate molecules on ipsi and contra neurite growth and fasciculation, as well as assess direct interactions between ipsilateral and contralateral neurites.
+While the Y assay is problematic in its current form, i.e., the incompatibility between laminin and microcontact printing, it would be very exciting to establish a more workable platform to directly assess neurite sorting and selective fasciculation interactions between ipsi and contra neurites.
+Microfabrication of Y shaped growth areas and establishing a 3D culture system could both be fruitful avenues.
+With either the bundle assay or a new iteration of a Y assay or 3D culture system, we could explore the role or candidate molecules (discussed in more detail ahead, and earlier in Section~\ref{sec:InVitroFuture}) in selective fasciculation and axon sorting.
+
+Finally, to extend upon the work presented and discussed in Chapter 4, it would be valuable to gain a better understanding of what surface molecules are expressed on ipsi RGC axons in the optic tract, as well as what the molecular environment of the optic tract is during development.
+But perhaps more importantly, to further test the relationship between tract position and targeting, it would be informative to conduct the reverse paradigm as we tested in the EphB1\textsuperscript{-/-} mutant.
+That is, we could ectopically express EphB1 in the retina during development and trace the axons that are now aberrantly ipsilateral --- will they course with ``true'' contra axons in the tract and target contra areas, or instead bundle with ipsi axons?
+Such experiments could expand our understanding of the relationship between tract order and targeting.
+However, the definitive experiments require precise and selective molecular manipulation of axons in the tract, sparing those that have not yet navigated the chiasm, and also sparing molecular expression in the target.
+In order to develop such an experiment, we first need better proteomic analyses of axons in the tract and a better understanding of the molecular milieu in the optic tract itself (as discussed further in the next section, and touched upon in Section~\ref{sec:LinkingEphB1}).
+The discussion in the next section of molecules details some possible candidates for further exploration both \emph{in vitro} and \emph{in vivo}.
